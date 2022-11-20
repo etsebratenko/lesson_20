@@ -1,3 +1,6 @@
 @use "../../node_modules/normalize.css/normalize";
+
 @use "common";
-@use "page/home/header";
+@use "header";
+@use "mixins";
+@use "presets";

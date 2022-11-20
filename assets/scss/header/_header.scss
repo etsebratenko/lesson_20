@@ -1,0 +1,120 @@
+@use "assets/scss/presets" as *;
+@use "assets/scss/mixins" as *;
+
+.page-header {
+  position: relative;
+  background: $bg-gradient-super-soft;
+  max-width: 100%;
+  overflow: hidden;
+
+  &__hat {
+    @include sm {
+      background: rgba(245, 245, 250, 0.2) 20%;
+    }
+  }
+
+  &__grid {
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: $gap;
+    padding-top: 50px;
+
+    @include sm-min {
+      padding-top: 50px;
+      grid-template-areas: "logo actions" "logo menu";
+    }
+    @include sm {
+      grid-template-areas: "actions actions" "logo menu";
+      padding-top: $gap;
+    }
+    @extend %container;
+  }
+
+  &__logo {
+    grid-area: logo;
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__logo-secondary {
+    display: none;
+
+    @include sm {
+      display: inline;
+      width: 169px;
+      height: 58px;;
+    }
+  }
+  &__menu {
+    grid-area: menu;
+  }
+
+  &__actions{
+    grid-area: actions;
+    
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    &-title {
+      position: relative;
+      margin: 0;
+      z-index: 1;
+      font-size: 38px;
+      text-align: center;
+      font-weight: 700;
+      max-width: 800px;
+      color: $color-white;
+
+
+      @include sm {
+        max-width:  315px;
+        justify-content: center;
+      } 
+    }
+
+    &-image {
+      position: absolute;
+      top: 0;
+
+      @include ul {
+        height: 799px;
+        width: 697px;
+      }
+      @include md {
+        height: 768px;
+        width: 670px;
+      }
+      @include sm {
+        height: 600px;
+        width: 523px;
+      }
+    }
+  }
+
+  &__button {
+    z-index: 2;
+    height: 42px;
+    width: 42px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 40px;
+  }
+  }
+
+
+
+

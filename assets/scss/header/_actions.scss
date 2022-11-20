@@ -1,0 +1,71 @@
+@use "assets/scss/presets" as *;
+@use "assets/scss/mixins" as *;
+
+.page-header__actions {
+
+}
+.actions {
+  display: flex;
+  gap: $gap;
+  align-items: center;
+
+  @include sm-min {
+    color: $color-white;
+    justify-content: flex-end;
+  }
+  @include sm {
+    color: $color-gray-bg-text;
+    justify-content: space-between;
+  }
+
+  &__languages {
+    display: flex;
+    
+    &-link {
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: $color-white;
+      display: block;
+      padding: 5px;
+      border-radius: 8px;
+
+      &.-active {
+        background-color: $color-accent;
+        color: $color-white;
+      }
+    }
+  }
+
+  &__locations {
+    font-style: normal;
+  
+    @include sm {
+      display: none;
+    }
+
+    &-link {
+      color: $color-white;
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+
+  &__phones {
+
+    &-link {
+      font-weight: 700;
+      color: $color-white;
+    }
+  }
+
+  &__socials {
+    @include sm {
+      display: none;
+    }
+
+    &-link {
+      color: inherit;
+    }
+  }
+}
