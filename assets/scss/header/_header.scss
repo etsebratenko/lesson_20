@@ -3,15 +3,9 @@
 
 .page-header {
   position: relative;
-  background: $bg-gradient-super-soft;
+  background: $color-primary;
   max-width: 100%;
   overflow: hidden;
-
-  &__hat {
-    @include sm {
-      background: rgba(245, 245, 250, 0.2) 20%;
-    }
-  }
 
   &__grid {
     position: absolute;
@@ -58,7 +52,6 @@
 
   &__actions{
     grid-area: actions;
-    
   }
 
   &__content {
@@ -67,6 +60,13 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+
+    @include md {
+      min-height: 96vh;
+    }
+    @include sm {
+      min-height: 75vh;
+    } 
 
     &-title {
       position: relative;
@@ -77,7 +77,6 @@
       font-weight: 700;
       max-width: 800px;
       color: $color-white;
-
 
       @include sm {
         max-width:  315px;
@@ -105,15 +104,28 @@
   }
 
   &__button {
-    z-index: 2;
-    height: 42px;
-    width: 42px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 40px;
+    position: absolute;
+    bottom: 30px;
+    left: calc(50% - 42px/2);
+
+
+      &-image {
+        fill: $color-white;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+        height: 42px;
+        width: 42px;
+
+        &:hover {
+          cursor: pointer;
+          fill: $color-accent;
+        }
+      }
   }
-  }
+}
+
 
 
 

@@ -1,9 +1,6 @@
 @use "assets/scss/presets" as *;
 @use "assets/scss/mixins" as *;
 
-.page-header__actions {
-
-}
 .actions {
   display: flex;
   gap: $gap;

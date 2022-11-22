@@ -1,0 +1,121 @@
+@use "assets/scss/presets" as *;
+@use "assets/scss/mixins" as *;
+
+.services {
+  position: relative;
+  background: linear-gradient(207.57deg, $color-primary 6.93%, $color-primary 59.17%, #643e72 85.46%);
+  border-radius: 0 0 12px 12px;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+  
+  &:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 40px;
+    left: 40px;
+    height: 20px;
+    border-radius: 0 0 12px 12px;
+    background-color: $color-gray-bg-separator;
+  }
+  
+  &:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    left: 20px;
+    height: 10px;
+    border-radius: 0 0 12px 12px;
+    background-color: $color-gray-bg-text;
+  }
+  
+  &__container {
+    @extend %container;
+  }
+}
+.service-item {
+
+  &__title {
+    color: $color-active;
+    max-width: 400px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    padding-bottom: 15px;
+  }
+  &__description {
+    color: $color-white;
+    max-width: 400px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  &__icon {
+    padding-bottom: 30px;
+  }
+}
+  .services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+    align-items: baseline;
+    gap: 60px;
+  
+    @include ul {
+      grid-template-columns: repeat(3, minmax(50px, max-content));
+    }
+  
+    @include lg {
+      grid-template-columns: repeat(3, minmax(50px, max-content));
+      row-gap: 60px;
+    }
+
+    @include md {
+      grid-template-columns: repeat(2, minmax(50px, max-content));
+      row-gap: 60px;
+    }
+  
+    @include sm {
+      grid-template-columns: repeat(1, minmax(50px, max-content));
+      row-gap: 30px;
+    }
+  }
+
+  .services__page {
+    display: flex;
+    gap: 2px;
+    padding-bottom: 10px;
+
+    &-link {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  }
+.services__title {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  max-width: 1320px;
+  padding-bottom: 30px;
+  background: $bg-gradient-red-text ;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  @include md {
+    max-width: 904px;
+  }
+
+  @include sm {
+    max-width: 315px;
+    font-size: 30px;
+    line-height: 37px;
+    padding-bottom: 30px;
+  }
+}

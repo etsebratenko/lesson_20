@@ -98,16 +98,18 @@
     display: flex;
     justify-content: flex-end;
     gap: $gap-md;
+
     @include unlist;
     @include sm {
       display: none;
 
       position: absolute;
       top: 0;
-      background-color: $color-primary;
       right: calc(-170px - 20px);
-      width: $mobile-menu-size;
+      background: $color-primary;
       height: 100vh;
+      width: 50%;
+      z-index: 2;
       padding: $gap;
     }
 
@@ -119,5 +121,10 @@
   &__link {
     font-size: 18px;
     color: $color-white;
+
+    &:hover {
+      color: $color-accent;
+    }
   }
+
 }

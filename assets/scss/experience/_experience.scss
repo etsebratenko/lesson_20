@@ -1,0 +1,17 @@
+@use "assets/scss/presets" as *;
+@use "assets/scss/mixins" as *;
+
+.experience {
+  background: $color-primary;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include md {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__container {
+    @extend %container;
+  }
+}

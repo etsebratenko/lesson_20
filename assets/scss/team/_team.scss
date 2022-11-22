@@ -1,0 +1,60 @@
+@use "assets/scss/presets" as *;
+@use "assets/scss/mixins" as *;
+
+.team {
+
+  &__container {
+    @extend %container;
+  }
+}
+.team-slider__content {
+
+
+
+}
+.team-slider {
+  border-radius: 12px;
+  background: $color-gray-bg;
+
+}
+.team-slider__notes {
+
+
+}
+.team-slider__note {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  width: 1320px;
+  height: 344px;
+  border-radius: 12px;
+
+}
+.active {
+}
+// .team-slider__photo {
+//   border-radius: 12px 0px 0px 12px;
+//   width: 400px;
+
+//   @include md {
+
+
+//   }
+
+//   @include sm {
+
+//   }
+// }
+.team-slider__page {
+}
+.team-slider__page-link {
+}
+.team-slider__page-image {
+}
+.team-slider__note-description {
+}
+.team-slider__note-name {
+}
+.team-slider__note-job {
+}

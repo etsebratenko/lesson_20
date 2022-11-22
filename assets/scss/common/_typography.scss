@@ -16,6 +16,7 @@ html {
 
 body {
   line-height: 1.2;
+  overflow-x: hidden;
 
   &.active {
     overflow: hidden;
@@ -36,6 +37,5 @@ body {
 
 a {
   text-decoration: none;
-  color: $color-white;
+  color: $color-active;
 }
-
