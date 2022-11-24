@@ -1,0 +1,110 @@
+@use "assets/scss/presets" as *;
+@use "assets/scss/mixins" as *;
+
+.page-footer {
+  background: $color-gray-bg;
+}
+.footer__container {
+  border-top: solid 2px $color-gray-bg-separator;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+
+  &-services {
+    border: none;
+    display: flex;      
+    justify-content: space-between;
+    padding: 30px 0;
+    @extend %container;
+    @include sm {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  @extend %container;
+
+  @include sm {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+
+
+  &__location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 26px;
+
+    @include sm {
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    &-link {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: $color-primary;
+    }
+
+    &-map {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $color-active;
+    }
+  }
+}
+
+.footer-contacts__contacts {
+  display: flex;
+  flex-direction: row;
+  gap: 26px;
+  align-items: center;
+
+  @include sm {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+.footer-contacts__socials-image {
+  width: 38px;
+  height: 38px;
+  color: $color-active;
+}
+
+.footer-contacts__phones-link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-primary;
+}
+.footer-contacts__link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.footer-copyright__copyright {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-gray-bg-text;
+
+  @include sm {
+    text-align: center;
+  }
+}

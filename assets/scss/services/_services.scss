@@ -7,6 +7,36 @@
   border-radius: 0 0 12px 12px;
   padding-bottom: 60px;
   margin-bottom: 60px;
+
+  &__services {
+    padding-top: 176px;
+    position: relative;
+    background: linear-gradient(207.57deg, $color-primary 6.93%, $color-primary 59.17%, #643e72 85.46%);
+    border-radius: 0 0 12px 12px;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      right: 40px;
+      left: 40px;
+      height: 20px;
+      border-radius: 0 0 12px 12px;
+      background-color: $color-gray-bg-separator;
+    }
+    
+    &:after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      right: 20px;
+      left: 20px;
+      height: 10px;
+      border-radius: 0 0 12px 12px;
+      background-color: $color-gray-bg-text;
+    }
+  }
   
   &:before {
     content: "";

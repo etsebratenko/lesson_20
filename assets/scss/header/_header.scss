@@ -6,6 +6,9 @@
   background: $color-primary;
   max-width: 100%;
   overflow: hidden;
+  &-services {
+    background: none;
+  }
 
   &__grid {
     position: absolute;
@@ -25,27 +28,27 @@
     @include sm {
       grid-template-areas: "actions actions" "logo menu";
       padding-top: $gap;
+      align-items: center
     }
     @extend %container;
   }
 
   &__logo {
     grid-area: logo;
-
-    @include sm {
-      display: none;
+    &-image {
+      width: 130px;
+      @include sm {
+        width: 70px;
+      }
+      &-services {
+        width: 200px;
+        @include sm {
+          width: 130px;
+        }
+      }
     }
   }
 
-  &__logo-secondary {
-    display: none;
-
-    @include sm {
-      display: inline;
-      width: 169px;
-      height: 58px;;
-    }
-  }
   &__menu {
     grid-area: menu;
   }
@@ -59,14 +62,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-
-    @include md {
-      min-height: 96vh;
-    }
-    @include sm {
-      min-height: 75vh;
-    } 
+    height: 100vh;
 
     &-title {
       position: relative;
@@ -86,20 +82,8 @@
 
     &-image {
       position: absolute;
+      height: 100vh;
       top: 0;
-
-      @include ul {
-        height: 799px;
-        width: 697px;
-      }
-      @include md {
-        height: 768px;
-        width: 670px;
-      }
-      @include sm {
-        height: 600px;
-        width: 523px;
-      }
     }
   }
 
@@ -125,8 +109,16 @@
       }
   }
 }
+.transparretn-bg {
+  display: none;
 
-
-
-
-
+  @include sm {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    background-color: $color-gray-bg;
+    opacity: .2;
+  }
+}
